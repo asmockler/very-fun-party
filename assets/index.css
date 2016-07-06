@@ -61,6 +61,7 @@ via javascript so that it can transform based on the window height. thx
 
 @media all and (max-width: 850px) {
   h1 { font-size: 100px; }
+  .floating-emoji { font-size: 32px; }
 }
 
 @media all and (max-width: 650px) {
@@ -70,5 +71,4 @@ via javascript so that it can transform based on the window height. thx
 
 @media all and (max-width: 520px) {
   h1 { font-size: 60px; }
-  .subtext { font-size: 16px; }
 }
