@@ -50,7 +50,8 @@
     container.classList.remove('slide-up');
     container.classList.remove('bounce-in');
     container.classList.add('slide-down');
-    window.setTimeout(function () {container.classList.add('bounce-out');}, 0)
+    window.setTimeout(function () {container.classList.add('bounce-out');}, 50);
+    document.body.style.overflow = 'hidden';
   }
 
   function showFaq() {
@@ -59,7 +60,8 @@
     container.classList.remove('slide-down');
     container.classList.remove('bounce-out');
     container.classList.add('slide-up');
-    window.setTimeout(function () {container.classList.add('bounce-in');}, 0)
+    window.setTimeout(function () {container.classList.add('bounce-in');}, 0);
+    document.body.style.overflow = 'auto';
   }
 
   document.addEventListener("DOMContentLoaded", function(event) {

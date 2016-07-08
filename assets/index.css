@@ -6,6 +6,9 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Times New Roman', 'Times', serif;
+}
+
+body {
   overflow: hidden;
 }
 
@@ -46,6 +49,14 @@ a:visited {
   color: #e86589;
 }
 
+a.no-style,
+a.no-style:visited,
+a.no-style:focus,
+a.no-style:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .more {
   font-size: 18px;
   font-weight: 300;
@@ -58,12 +69,11 @@ a:visited {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   padding: 50px 100px 100px;
   z-index: 11;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2000, 0, 1);
   font-family: Helvetica, Arial, sans;
-  overflow: scroll;
   background: #9ef9f0;
 }
 
@@ -82,6 +92,7 @@ a:visited {
   background: #e86589;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .faq p,
