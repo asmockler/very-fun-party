@@ -24,7 +24,7 @@
     // Append to body
     document.body.appendChild(element);
 
-    // Remove the element once off screen
+    // Fade out and remove the element
     window.setTimeout(function () {document.body.removeChild(element)}, randomDuration);
   }
 
@@ -36,22 +36,40 @@
   function createKeyframes() {
     var keyframe = document.createElement('style');
     keyframe.innerHTML = "@keyframes fall-from-top { \n\
-      0% { transform: translateY(-30px) } \n\
-      100% { transform: translateY(" + window.innerHeight + "px) } \n\
+      0% { transform: translateY(-30px); } \n\
+      100% { transform: translateY(" + (window.innerHeight + 10) + "px); } \n\
     }";
 
     if (currentKeyframes !== null) { document.head.removeChild(currentKeyframes) }
     document.head.appendChild(keyframe);
   }
 
+  function hideFaq() {
+    var container = document.querySelector('.faq');
+
+    container.classList.remove('slide-up');
+    container.classList.remove('bounce-in');
+    container.classList.add('slide-down');
+    window.setTimeout(function () {container.classList.add('bounce-out');}, 0)
+  }
+
+  function showFaq() {
+    var container = document.querySelector('.faq');
+
+    container.classList.remove('slide-down');
+    container.classList.remove('bounce-out');
+    container.classList.add('slide-up');
+    window.setTimeout(function () {container.classList.add('bounce-in');}, 0)
+  }
+
   document.addEventListener("DOMContentLoaded", function(event) {
     createKeyframes();
-    window.addEventListener('resize', function () {
-      console.log('hey');
-      createKeyframes();
-    })
+    window.addEventListener('resize', createKeyframes);
 
     for (var i = 0; i < 3; i++) { makeFloatingEmoji() }
     window.setInterval(makeFloatingEmoji, 700);
+
+    document.querySelector('.more').addEventListener('click', showFaq);
+    document.querySelector('.close-faq').addEventListener('click', hideFaq);
   });
 })()
