@@ -69,7 +69,7 @@
     window.addEventListener('resize', createKeyframes);
 
     for (var i = 0; i < 3; i++) { makeFloatingEmoji() }
-    window.setInterval(makeFloatingEmoji, 700);
+    window.setInterval(makeFloatingEmoji, 100);
 
     document.querySelector('.more').addEventListener('click', showFaq);
     document.querySelector('.close-faq').addEventListener('click', hideFaq);
