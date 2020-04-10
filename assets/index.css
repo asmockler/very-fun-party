@@ -141,6 +141,25 @@ a.no-style:hover {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 
+.faq-body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.reasons {
+  width: 50%;
+  min-width: 200px;
+}
+
+.pics {
+  width: 50%;
+  min-width: 200px;
+}
+
+.mbt {
+  width: 3em;
+}
+
 /* Generated with Bounce.js. Edit at http://goo.gl/RzkIzW */
 
 @-webkit-keyframes animation {
